@@ -13,7 +13,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react-jsx",
+    "noFallthroughCasesInSwitch": true
   },
+  "exclude": [
+    ".storybook",
+    "dist",
+    "node_modules",
+    "stories",
+    "tests",
+    "src/setupTests.ts"
+  ],
   "include": ["src"]
 }

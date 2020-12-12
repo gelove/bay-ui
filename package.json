@@ -24,9 +24,9 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
-    "lint": "eslint --ext js,ts,tsx src --max-warnings 10",
+    "lint": "eslint {src,stories,tests}/**/*.{ts,tsx}  --max-warnings 10",
     "build": "yarn clean && yarn build-ts && yarn build-css",
-    "test": "cross-env CI=true react-scripts test",
+    "test": "cross-env CI=true react-scripts test --detectOpenHandles",
     "test-watch": "react-scripts test",
     "eject": "react-scripts eject",
     "build-ts": "tsc -p tsconfig.build.json",
@@ -70,6 +70,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^6.1.10",
     "@storybook/addon-docs": "^6.1.10",
+    "@storybook/addon-essentials": "^6.1.10",
     "@storybook/addon-links": "^6.1.10",
     "@storybook/addons": "^6.1.10",
     "@storybook/react": "^6.1.10",
@@ -89,5 +90,9 @@
     "rimraf": "^3.0.0",
     "sass": "^1.30.0",
     "typescript": "^4.1.2"
+  },
+  "volta": {
+    "node": "10.23.0",
+    "yarn": "1.22.10"
   }
 }

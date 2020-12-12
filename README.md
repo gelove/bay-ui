@@ -1,19 +1,23 @@
 ## bay-ui component library
 
+```bash
 [![Build Status](https://travis-ci.com/allen/bay-ui.svg?token=acmscsqinbuynolkvpiyt&branch=master)](https://travis-ci.com/allen/bay-ui)
+```
 
 bay-ui 使用 React Hooks 和 Typescript
 [bay-ui.alin.app](https://bay-ui.alin.app)
 
 ### 安装组件库
 
-```javascript
+```bash
 npm install bay-ui --save
+or
+yarn add bay-ui
 ```
 
 ### 使用
 
-```javascript
+```bash
 // 加载样式
 import 'bay-ui/dist/index.css'
 // 引入组件

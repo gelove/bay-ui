@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import Button from '../src/components/Button/button'
+import Button from '../src/components/Button'
 
 const defaultButton = () => (
   <Button onClick={action('clicked')}> default button </Button>
@@ -19,7 +19,10 @@ const buttonWithType = () => (
   <>
     <Button btnType="primary"> primary button </Button>
     <Button btnType="danger"> danger button </Button>
-    <Button btnType="link" href="https://google.com"> link button </Button>
+    <Button btnType="link" href="https://google.com">
+      {' '}
+      link button{' '}
+    </Button>
   </>
 )
 storiesOf('Button Component', module)

@@ -5,13 +5,16 @@
     "target": "es5",
     "declaration": true,
     "jsx": "react",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
   "exclude": [
-    "src/**/*.test.tsx",
-    "stories/**/*.story.tsx",
+    ".storybook",
+    "dist",
+    "node_modules",
+    "stories",
+    "tests",
     "src/setupTests.ts"
-  ]
+  ],
+  "include": ["src"]
 }

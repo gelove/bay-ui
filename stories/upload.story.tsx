@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import Upload from '../src/components/Upload'
@@ -20,6 +20,7 @@ import Icon from '../src/components/Icon'
 //   const newFile = new File([file], 'new_name.docx', {type: file.type})
 //   return Promise.resolve(newFile)
 // }
+
 const SimpleUpload = () => {
   return (
     <Upload
@@ -31,11 +32,10 @@ const SimpleUpload = () => {
       drag
     >
       <Icon icon="upload" size="5x" theme="secondary" />
-      <br/>
+      <br />
       <p>Drag file over to upload</p>
     </Upload>
   )
 }
 
-storiesOf('Upload component', module)
-  .add('Upload', SimpleUpload)
+storiesOf('Upload component', module).add('Upload', SimpleUpload)

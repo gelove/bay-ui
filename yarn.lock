@@ -1737,7 +1737,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-actions@^6.1.10":
+"@storybook/addon-actions@6.1.10", "@storybook/addon-actions@^6.1.10":
   version "6.1.10"
   resolved "https://registry.npm.taobao.org/@storybook/addon-actions/download/@storybook/addon-actions-6.1.10.tgz#3742c316e914e2aef661a132e4d7e6c334e89997"
   integrity sha1-N0LDFukU4q72YaEy5NfmwzTomZc=
@@ -1760,7 +1760,39 @@
     util-deprecate "^1.0.2"
     uuid "^8.0.0"
 
-"@storybook/addon-docs@^6.1.10":
+"@storybook/addon-backgrounds@6.1.10":
+  version "6.1.10"
+  resolved "https://r.cnpmjs.org/@storybook/addon-backgrounds/download/@storybook/addon-backgrounds-6.1.10.tgz#eba6faf23f7cb060664d05245b1b886b98edc604"
+  integrity sha1-66b68j98sGBmTQUkWxuIa5jtxgQ=
+  dependencies:
+    "@storybook/addons" "6.1.10"
+    "@storybook/api" "6.1.10"
+    "@storybook/client-logger" "6.1.10"
+    "@storybook/components" "6.1.10"
+    "@storybook/core-events" "6.1.10"
+    "@storybook/theming" "6.1.10"
+    core-js "^3.0.1"
+    global "^4.3.2"
+    memoizerific "^1.11.3"
+    regenerator-runtime "^0.13.7"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/addon-controls@6.1.10":
+  version "6.1.10"
+  resolved "https://r.cnpmjs.org/@storybook/addon-controls/download/@storybook/addon-controls-6.1.10.tgz#c5fa6ea6266f43a952abe18754ae5de3135eab9e"
+  integrity sha1-xfpupiZvQ6lSq+GHVK5d4xNeq54=
+  dependencies:
+    "@storybook/addons" "6.1.10"
+    "@storybook/api" "6.1.10"
+    "@storybook/client-api" "6.1.10"
+    "@storybook/components" "6.1.10"
+    "@storybook/node-logger" "6.1.10"
+    "@storybook/theming" "6.1.10"
+    core-js "^3.0.1"
+    ts-dedent "^2.0.0"
+
+"@storybook/addon-docs@6.1.10", "@storybook/addon-docs@^6.1.10":
   version "6.1.10"
   resolved "https://registry.npm.taobao.org/@storybook/addon-docs/download/@storybook/addon-docs-6.1.10.tgz#a118d1c9c0ff3158e95de59b752e367aadd6880b"
   integrity sha1-oRjRycD/MVjpXeWbdS42eq3WiAs=
@@ -1806,6 +1838,24 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
+"@storybook/addon-essentials@^6.1.10":
+  version "6.1.10"
+  resolved "https://r.cnpmjs.org/@storybook/addon-essentials/download/@storybook/addon-essentials-6.1.10.tgz#363796c8d4dbb3c2aa1357bf5d0fe160961ca7c1"
+  integrity sha1-NjeWyNTbs8KqE1e/XQ/hYJYcp8E=
+  dependencies:
+    "@storybook/addon-actions" "6.1.10"
+    "@storybook/addon-backgrounds" "6.1.10"
+    "@storybook/addon-controls" "6.1.10"
+    "@storybook/addon-docs" "6.1.10"
+    "@storybook/addon-toolbars" "6.1.10"
+    "@storybook/addon-viewport" "6.1.10"
+    "@storybook/addons" "6.1.10"
+    "@storybook/api" "6.1.10"
+    "@storybook/node-logger" "6.1.10"
+    core-js "^3.0.1"
+    regenerator-runtime "^0.13.7"
+    ts-dedent "^2.0.0"
+
 "@storybook/addon-links@^6.1.10":
   version "6.1.10"
   resolved "https://registry.npm.taobao.org/@storybook/addon-links/download/@storybook/addon-links-6.1.10.tgz#7aeaa9467527e3ef294efc5b27f22bf3ff05a4bd"
@@ -1823,6 +1873,34 @@
     qs "^6.6.0"
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
+
+"@storybook/addon-toolbars@6.1.10":
+  version "6.1.10"
+  resolved "https://r.cnpmjs.org/@storybook/addon-toolbars/download/@storybook/addon-toolbars-6.1.10.tgz#8ed5b62a320bf442d37171ae6a6613d800831c40"
+  integrity sha1-jtW2KjIL9ELTcXGuamYT2ACDHEA=
+  dependencies:
+    "@storybook/addons" "6.1.10"
+    "@storybook/api" "6.1.10"
+    "@storybook/client-api" "6.1.10"
+    "@storybook/components" "6.1.10"
+    core-js "^3.0.1"
+
+"@storybook/addon-viewport@6.1.10":
+  version "6.1.10"
+  resolved "https://r.cnpmjs.org/@storybook/addon-viewport/download/@storybook/addon-viewport-6.1.10.tgz#f253516d61945904cc18149d8efa8937e4cc06c7"
+  integrity sha1-8lNRbWGUWQTMGBSdjvqJN+TMBsc=
+  dependencies:
+    "@storybook/addons" "6.1.10"
+    "@storybook/api" "6.1.10"
+    "@storybook/client-logger" "6.1.10"
+    "@storybook/components" "6.1.10"
+    "@storybook/core-events" "6.1.10"
+    "@storybook/theming" "6.1.10"
+    core-js "^3.0.1"
+    global "^4.3.2"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
+    regenerator-runtime "^0.13.7"
 
 "@storybook/addons@6.1.10", "@storybook/addons@^6.1.10":
   version "6.1.10"
@@ -2480,10 +2558,18 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*", "@types/jest@^26.6.0":
+"@types/jest@*":
   version "26.0.18"
   resolved "https://registry.npm.taobao.org/@types/jest/download/@types/jest-26.0.18.tgz#3c5f9228e9ac15bd42f903f1acf2ad6ea5ed73d9"
   integrity sha1-PF+SKOmsFb1C+QPxrPKtbqXtc9k=
+  dependencies:
+    jest-diff "^26.0.0"
+    pretty-format "^26.0.0"
+
+"@types/jest@^26.6.0":
+  version "26.0.19"
+  resolved "https://r.cnpmjs.org/@types/jest/download/@types/jest-26.0.19.tgz#e6fa1e3def5842ec85045bd5210e9bb8289de790"
+  integrity sha1-5voePe9YQuyFBFvVIQ6buCid55A=
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"

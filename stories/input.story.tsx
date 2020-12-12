@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { Input } from '../src/components/Input/input'
+import Input from '../src/components/Input'
 
 const ControlledInput = () => {
   const [value, setValue] = useState('')
