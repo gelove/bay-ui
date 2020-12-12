@@ -1,0 +1,137 @@
+$red: #e80000;
+$grey: #c0c0c0;
+$blue: #0084ce;
+$black: #000;
+$green: #0c0;
+$white: #fff;
+$greyWhite: #e8e8e8;
+
+@mixin border($color: black, $width: 1px) {
+  border: $width solid $color;
+}
+
+.ulStyle {
+  padding: 0;
+  font-size: 18px;
+  list-style: none;
+}
+
+.textStyle {
+  flex: 1;
+  word-break: normal;
+  margin: 10px;
+  text-align: center;
+}
+
+.textToefl {
+  @include textStyle;
+  text-align: left;
+}
+
+.ovalStyle {
+  width: 30px;
+  height: 16px;
+  margin: auto 15px;
+  border-radius: 50%;
+  @include border($grey);
+}
+
+.liStyle {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid $greyWhite;
+  padding: 5px;
+  min-height: 60px;
+  &:hover {
+    .ovalStyle {
+      @include border;
+    }
+  }
+}
+
+.liCheckedStyle {
+  @extend .liStyle;
+  background-color: $greyWhite;
+  .radioStyle {
+    background-color: $blue;
+    color: $white;
+  }
+
+  .ovalStyle {
+    @include border;
+    background-color: $black;
+  }
+
+  .checkboxStyle {
+    @include border;
+    background: url('../../../../../statics/images/check.svg');
+    background-size: contain;
+  }
+}
+
+.radioStyle {
+  width: 30px;
+  line-height: 26px;
+  text-align: center;
+  color: $blue;
+  font-size: 16px;
+  margin: auto 15px;
+  @include border($blue, 2px);
+  border-radius: 50%;
+}
+
+.liCorrectStyle {
+  @extend .liStyle;
+  background-color: $greyWhite;
+  border-bottom: 1px solid $green;
+  .radioStyle {
+    @include border($green, 2px);
+    background-color: $green;
+    color: $white;
+  }
+  .ovalStyle {
+    @include border($green);
+    background-color: $green;
+  }
+}
+
+.liErrorStyle {
+  @extend .liStyle;
+  background-color: $greyWhite;
+  border-bottom: 1px solid $red;
+  .radioStyle {
+    @include border($red, 2px);
+    background-color: $red;
+    color: $white;
+  }
+  .ovalStyle {
+    @include border($red);
+    background-color: $red;
+  }
+}
+
+.checkboxStyle {
+  width: 20px;
+  height: 20px;
+  margin: auto 15px;
+  @include border($grey);
+}
+
+.liCheckboxCorrectStyle {
+  @extend .liStyle;
+  background-color: $greyWhite;
+  .checkboxStyle {
+    background-color: $green;
+    background-size: contain;
+  }
+}
+
+.liCheckboxErrorStyle {
+  @extend .liStyle;
+  background-color: $greyWhite;
+  .checkboxStyle {
+    background-color: $red;
+    background-size: contain;
+  }
+}
