@@ -36,15 +36,15 @@ import { Button } from 'bay-ui'
 ### 一些本地开发命令
 
 ```bash
-//启动本地环境
+// 启动 stroybook
 yarn stroybook
 
-//跑单元测试
+// 单元测试
 yarn test
 
-//build可发布静态文件
+// build 可发布静态文件
 yarn build
 
-//发布到 npm
+// 发布到 npm
 npm publish
 ```
