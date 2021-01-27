@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
-    "lint": "eslint {src,stories,tests}/**/*.{ts,tsx}  --max-warnings 10",
+    "lint": "eslint {src,stories,tests}/**/*.{tsx}  --max-warnings 10",
     "build": "yarn clean && yarn build-ts && yarn build-css",
     "test": "cross-env CI=true react-scripts test --detectOpenHandles",
     "test-watch": "react-scripts test",
@@ -34,6 +34,11 @@
     "storybook": "start-storybook -p 9990 -s public",
     "build-storybook": "build-storybook -s public",
     "prepublishOnly": "yarn test && yarn lint && yarn build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && yarn lint"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"

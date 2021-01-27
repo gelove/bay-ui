@@ -6,8 +6,8 @@ const centerStyle = {
   placeContent: 'center',
 }
 
-export const centerWrapper = (Story) => (
+export const centerWrapper = (Story: any) => (
   <div style={centerStyle}>
-    <Story />
+    <Story/>
   </div>
 )

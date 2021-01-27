@@ -75,7 +75,7 @@ const Menu: FC<MenuProps> = (props) => {
         })
       } else {
         console.error(
-          `Warning: Menu has a child[${childElement.type.name}] which is not a valid component`
+          `Warning: Menu has a child[${childElement.type.name}] which is not a SubMenu or MenuItem`
         )
         return null
       }

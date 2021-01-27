@@ -63,13 +63,13 @@ const SubMenu: React.FC<SubMenuProps> = ({
     })
     const childrenComponent = React.Children.map(children, (child, i) => {
       const childElement = child as FunctionComponentElement<MenuItemProps>
-      if (childElement.type.displayName === 'MenuItem') {
+      if (childElement.type.name === 'MenuItem') {
         return React.cloneElement(childElement, {
           index: `${index}-${i}`,
         })
       } else {
         console.error(
-          'Warning: SubMenu has a child which is not a MenuItem component'
+          `Warning: SubMenu has a child[${childElement.type.name}] which is not a MenuItem`
         )
       }
     })

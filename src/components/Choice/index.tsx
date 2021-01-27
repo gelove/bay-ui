@@ -101,7 +101,7 @@ const Choice: FC<IChoiceProps> = (props) => {
             const childElement = child as React.FunctionComponentElement<IChoiceOptionProps>
             if (childElement.type.name !== 'ChoiceOption') {
               console.error(
-                `Warning: Choice has a child[${childElement.type.name}] which is not a ChoiceOption component`
+                `Warning: Choice has a child[${childElement.type.name}] which is not a ChoiceOption`
               )
               return null
             }

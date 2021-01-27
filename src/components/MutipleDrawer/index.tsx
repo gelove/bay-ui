@@ -6,11 +6,11 @@ import React, {
     createContext,
   } from 'react'
   import classNames from 'classnames'
-  
-  
+
+
   export type HandelSelect = (list: number[]) => void
   export type HandelClick = (index: number) => void
-  
+
   export interface IChoiceProps {
     /** 是否为回顾模式 */
     isReview: boolean
@@ -28,7 +28,7 @@ import React, {
     onSelect?: HandelSelect
     onWarning?: () => {}
   }
-  
+
   export interface IChoiceOptionProps {
     index?: number
     isCorrect?: boolean
@@ -37,13 +37,13 @@ import React, {
     style?: React.CSSProperties
     className?: string
   }
-  
+
   export interface IChoiceChildrenContext {
     onClick?: HandelClick
   }
-  
+
   export const ChoiceChildrenContext = createContext<IChoiceChildrenContext>({})
-  
+
   const Choice: FC<IChoiceProps> = (props) => {
     const {
       isReview,
@@ -57,17 +57,17 @@ import React, {
       onWarning,
       ...rest
     } = props
-  
+
     const classes = classNames('bay-choice-wrapper', className, {
       'is-checkbox': answerCount > 1,
     })
-  
+
     const [selected, setSelected] = useState<number[]>(userAnswers)
-  
+
     useEffect(() => {
       onSelect && onSelect(selected)
     }, [onSelect, selected])
-  
+
     const handleSelect = (val: number) => {
       if (isReview) {
         return
@@ -92,11 +92,11 @@ import React, {
         return list
       })
     }
-  
+
     const ChildrenContext: IChoiceChildrenContext = {
       onClick: handleSelect,
     }
-  
+
     return (
       <div className={classes} {...rest}>
         <span className='choice-stem'>{content}</span>
@@ -106,10 +106,9 @@ import React, {
               const childElement = child as React.FunctionComponentElement<
                 IChoiceOptionProps
               >
-              const { displayName } = childElement.type
-              if (displayName !== 'ChoiceOption') {
+              if (childElement.type.name !== 'ChoiceOption') {
                 console.error(
-                  'Warning: Choice has a child which is not a ChoiceOption component'
+                  `Warning: Choice has a child[${childElement.type.name}] which is not a ChoiceOption`
                 )
                 return null
               }
@@ -129,9 +128,9 @@ import React, {
       </div>
     )
   }
-  
+
   export type IChoiceComponent = FC<IChoiceProps> & { Item: FC<IChoiceOptionProps> }
-  
+
   /**
    * 选择题组件
    *
@@ -152,10 +151,9 @@ import React, {
 //       answers: [],
 //       userAnswers: [],
 //     }
-  
+
 //     render() {
 //       return <Choice {...this.props} />
 //     }
 //   }
-  
-  
+
