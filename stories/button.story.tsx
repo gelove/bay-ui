@@ -1,31 +1,65 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
+import { Story, Meta } from '@storybook/react/types-6-0'
 
-import Button from '../src/components/Button'
+import Button, { ButtonProps } from '../src/components/Button'
+import { centerWrapper } from './decorators'
 
-const defaultButton = () => (
-  <Button onClick={action('clicked')}> default button </Button>
-)
+export default {
+  title: 'TestBay/Button',
+  component: Button,
+  decorators: [centerWrapper],
+  argTypes: {
+    label: { control: 'text' },
+    size: { control: { type: 'inline-radio' } },
+    btnType: { control: { type: 'inline-radio' } },
+    // btnType: { control: { type: 'select' } },
+    // size: { table: { disable: true } }, // 禁止显示 size
+    // btnType: { control: { disable: true } }, // 禁止控制 btnType
+    backgroundColor: { control: 'color' }, // 可控制色板
+    onClick: { action: 'onClick', control: { disable: true } }, // 事件
+  },
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: 'story-red', value: 'pink' },
+        { name: 'story-green', value: 'olive' },
+      ],
+    },
+  },
+} as Meta
 
-const buttonWithSize = () => (
-  <>
-    <Button size="lg"> large button </Button>
-    <Button size="sm"> small button </Button>
-  </>
-)
+const Template: Story<ButtonProps> = (args) => <Button {...args} />
 
-const buttonWithType = () => (
-  <>
-    <Button btnType="primary"> primary button </Button>
-    <Button btnType="danger"> danger button </Button>
-    <Button btnType="link" href="https://google.com">
-      {' '}
-      link button{' '}
-    </Button>
-  </>
-)
-storiesOf('Button Component', module)
-  .add('Button', defaultButton)
-  .add('不同尺寸的 Button', buttonWithSize)
-  .add('不同类型的 Button', buttonWithType)
+export const Primary = Template.bind({})
+Primary.args = {
+  btnType: 'primary',
+  label: 'Primary',
+}
+Primary.parameters = {
+  backgrounds: {
+    values: [
+      { name: 'story-red', value: 'DarkRed' },
+      { name: 'story-green', value: 'DarkGreen' },
+    ],
+  },
+}
+
+export const Large = Template.bind({})
+Large.args = {
+  size: 'lg',
+  label: 'Large',
+}
+
+export const Anchor = Template.bind({})
+Anchor.args = {
+  btnType: 'link',
+  href: 'https://baidu.com',
+  children: 'Anchor',
+}
+
+export const CustomControls = Template.bind({})
+CustomControls.args = { children: <span>CustomControls</span> }
+CustomControls.argTypes = {
+  size: { table: { disable: true } }, // 禁止显示 size
+  btnType: { control: { disable: true } }, // 禁止控制 btnType
+}

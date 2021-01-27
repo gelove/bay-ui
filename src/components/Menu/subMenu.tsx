@@ -1,7 +1,7 @@
 import React, { useContext, useState, FunctionComponentElement } from 'react'
 import classNames from 'classnames'
 import { MenuContext } from '.'
-import { MenuItemProps } from './menuItem'
+import MenuItem, { MenuItemProps } from './menuItem'
 import Icon from '../Icon'
 import Transition from '../Transition'
 export interface SubMenuProps {
@@ -58,7 +58,7 @@ const SubMenu: React.FC<SubMenuProps> = ({
         }
       : {}
   const renderChildren = () => {
-    const subMenuClasses = classNames('allen-sub-menu', {
+    const subMenuClasses = classNames('bay-sub-menu', {
       'menu-opened': menuOpen,
     })
     const childrenComponent = React.Children.map(children, (child, i) => {
@@ -90,5 +90,4 @@ const SubMenu: React.FC<SubMenuProps> = ({
   )
 }
 
-SubMenu.displayName = 'SubMenu'
 export default SubMenu

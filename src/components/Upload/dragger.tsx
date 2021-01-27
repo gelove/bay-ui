@@ -8,7 +8,7 @@ interface DraggerProps {
 export const Dragger: FC<DraggerProps> = (props) => {
   const { onFile, children } = props
   const [dragOver, setDragOver] = useState(false)
-  const classes = classNames('allen-uploader-dragger', {
+  const classes = classNames('bay-uploader-dragger', {
     'is-drag-over': dragOver,
   })
   const handleDrop = (e: DragEvent<HTMLElement>) => {

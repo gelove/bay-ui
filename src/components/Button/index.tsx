@@ -1,19 +1,34 @@
-import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import React, {
+  FC,
+  ReactNode,
+  MouseEventHandler,
+  ButtonHTMLAttributes,
+  AnchorHTMLAttributes,
+} from 'react'
 import classNames from 'classnames'
 
-export type ButtonSize = 'lg' | 'sm'
+export type ButtonSize = 'lg' | 'md' | 'sm'
 export type ButtonType = 'primary' | 'default' | 'danger' | 'link'
 
 interface BaseButtonProps {
+  /** 设置 Button 的名称(children优先) */
+  label?: string
+  /** 设置 Button 的子节点 */
+  children: ReactNode
+  /** 自定义 Button 的css类 */
   className?: string
-  /**设置 Button 的禁用 */
+  /** 自定义 Button 的背景色 */
+  backgroundColor?: string
+  /** 设置 Button 的禁用 */
   disabled?: boolean
-  /**设置 Button 的尺寸 */
+  /** 设置 Button 的尺寸 */
   size?: ButtonSize
-  /**设置 Button 的类型 */
+  /** 设置 Button 的类型 */
   btnType?: ButtonType
-  children: React.ReactNode
+  /** A标签地址(btnType=link 时才有效) */
   href?: string
+  /** 设置 Button 的点击事件 */
+  // onClick?: MouseEventHandler<HTMLElement>
 }
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
 type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
@@ -21,16 +36,22 @@ export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
 /**
  * 页面中最常用的的按钮元素，适合于完成特定的交互
+ *
  * ### 引用方法
  *
- * ~~~js
+ * ```js
  * import { Button } from 'bay-ui'
- * ~~~
+ * // or
+ * import Button from 'bay-ui/dist/components/Button'
+ * ```
  */
 const Button: FC<ButtonProps> = (props) => {
   const {
+    label,
     btnType,
+    style,
     className,
+    backgroundColor,
     disabled,
     size,
     children,
@@ -46,13 +67,18 @@ const Button: FC<ButtonProps> = (props) => {
   if (btnType === 'link' && href) {
     return (
       <a className={classes} href={href} {...restProps}>
-        {children}
+        {children || label}
       </a>
     )
   } else {
     return (
-      <button className={classes} disabled={disabled} {...restProps}>
-        {children}
+      <button
+        className={classes}
+        style={{ ...style, backgroundColor }}
+        disabled={disabled}
+        {...restProps}
+      >
+        {children || label}
       </button>
     )
   }

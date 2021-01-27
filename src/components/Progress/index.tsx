@@ -11,13 +11,13 @@ export interface ProgressProps {
 const Progress: FC<ProgressProps> = (props) => {
   const { percent, strokeHeight, showText, styles, theme } = props
   return (
-    <div className="allen-progress-bar" style={styles}>
+    <div className="bay-progress-bar" style={styles}>
       <div
-        className="allen-progress-bar-outer"
+        className="bay-progress-bar-outer"
         style={{ height: `${strokeHeight}px` }}
       >
         <div
-          className={`allen-progress-bar-inner color-${theme}`}
+          className={`bay-progress-bar-inner color-${theme}`}
           style={{ width: `${percent}%` }}
         >
           {showText && <span className="inner-text">{`${percent}%`}</span>}

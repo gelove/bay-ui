@@ -2,7 +2,7 @@
   "name": "bay-ui",
   "version": "0.1.4",
   "description": "React components library",
-  "author": "allen ge",
+  "author": "Allen",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -35,11 +35,6 @@
     "build-storybook": "build-storybook -s public",
     "prepublishOnly": "yarn test && yarn lint && yarn build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn test && yarn lint"
-    }
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -68,16 +63,13 @@
     "react-transition-group": "^4.4.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.1.10",
-    "@storybook/addon-docs": "^6.1.10",
     "@storybook/addon-essentials": "^6.1.10",
     "@storybook/addon-links": "^6.1.10",
-    "@storybook/addons": "^6.1.10",
     "@storybook/react": "^6.1.10",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@types/classnames": "^2.2.11",
-    "@types/jest": "^26.6.0",
+    "@types/jest": "^26.0.0",
     "@types/node": "^14.14.11",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
@@ -90,9 +82,5 @@
     "rimraf": "^3.0.0",
     "sass": "^1.30.0",
     "typescript": "^4.1.2"
-  },
-  "volta": {
-    "node": "10.23.0",
-    "yarn": "1.22.10"
   }
 }

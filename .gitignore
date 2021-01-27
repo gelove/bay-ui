@@ -20,7 +20,14 @@
 .env.test.local
 .env.production.local
 
+# test
+test.scss
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .eslintcache
+
+# ide
+.idea
+.vscode

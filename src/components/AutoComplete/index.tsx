@@ -131,7 +131,7 @@ const AutoComplete: FC<AutoCompleteProps> = (props) => {
           setSuggestions([])
         }}
       >
-        <ul className="allen-suggestion-list">
+        <ul className="bay-suggestion-list">
           {loading && (
             <div className="suggstions-loading-icon">
               <Icon icon="spinner" spin />
@@ -157,7 +157,7 @@ const AutoComplete: FC<AutoCompleteProps> = (props) => {
   }
 
   return (
-    <div className="allen-auto-complete" ref={componentRef}>
+    <div className="bay-auto-complete" ref={componentRef}>
       <Input
         value={inputValue}
         onChange={handleChange}

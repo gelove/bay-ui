@@ -1,13 +1,13 @@
-.allen-progress-bar {
+.bay-progress-bar {
   width: 100%;
   box-sizing: border-box;
-  .allen-progress-bar-outer {
+  .bay-progress-bar-outer {
     border-radius: $progress-border-radius;
     background-color: $progress-bg;
     overflow: hidden;
     position: relative;
   }
-  .allen-progress-bar-inner {
+  .bay-progress-bar-inner {
     position: absolute;
     left: 0;
     top: 0;

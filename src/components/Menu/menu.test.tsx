@@ -51,10 +51,10 @@ const generateMenu = (props: MenuProps) => {
 
 const createStyleFile = () => {
   const cssFile: string = `
-    .allen-sub-menu {
+    .bay-sub-menu {
       display: none;
     }
-    .allen-sub-menu.menu-opened {
+    .bay-sub-menu.menu-opened {
       display:block;
     }
   `
@@ -78,7 +78,7 @@ describe('test Menu and Menu.Item component in default(horizontal) mode', () => 
   })
   it('should render correct Menu and Menu.Item based on default props', () => {
     expect(menuElement).toBeInTheDocument()
-    expect(menuElement).toHaveClass('allen-menu test')
+    expect(menuElement).toHaveClass('bay-menu test')
     expect(menuElement.querySelectorAll(':scope > li').length).toEqual(5)
     expect(activeElement).toHaveClass('menu-item is-active')
     expect(disabledElement).toHaveClass('menu-item is-disabled')

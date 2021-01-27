@@ -41,9 +41,9 @@ describe('test upload component', () => {
   beforeEach(() => {
     wrapper = render(<Upload {...testProps}>Click to upload</Upload>)
     fileInput = wrapper.container.querySelector(
-      '.allen-file-input'
+      '.bay-file-input'
     ) as HTMLInputElement
-    // const fileInputTemp = wrapper.container.querySelector('.allen-file-input')
+    // const fileInputTemp = wrapper.container.querySelector('.bay-file-input')
     // expect(fileInputTemp).not.toBeNull()
     // fileInput = fileInputTemp as HTMLInputElement
     uploadArea = wrapper.queryByText('Click to upload') as HTMLElement

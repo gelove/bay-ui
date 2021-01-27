@@ -37,6 +37,16 @@
     $btn-border-radius-lg
   );
 }
+
+.btn-md {
+  @include button-size(
+    $btn-padding-y-md,
+    $btn-padding-x-md,
+    $btn-font-size-md,
+    $btn-border-radius-md
+  );
+}
+
 .btn-sm {
   @include button-size(
     $btn-padding-y-sm,
@@ -49,6 +59,7 @@
 .btn-primary {
   @include button-style($primary, $primary, $white);
 }
+
 .btn-danger {
   @include button-style($danger, $danger, $white);
 }

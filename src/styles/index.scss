@@ -1,8 +1,8 @@
 // config
 @import 'variables';
 
-// layout
-@import 'reboot';
+// normalize
+@import 'normalize';
 
 // mixin
 @import 'mixin';
@@ -10,23 +10,26 @@
 // animation
 @import 'animation';
 
-// button
+// Button
 @import '../components/Button/style';
 
-// menu
+// Menu
 @import '../components/Menu/style';
 
-// icon
+// Icon
 @import '../components/Icon/style';
 
-// input
+// Input
 @import '../components/Input/style';
 
-// auto-complete
+// AutoComplete
 @import '../components/AutoComplete/style';
 
-// upload
+// Upload
 @import '../components/Upload/style';
 
-// progress
+// Progress
 @import '../components/Progress/style';
+
+// Choice
+@import '../components/Choice/style';

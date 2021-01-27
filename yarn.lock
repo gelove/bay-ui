@@ -1737,7 +1737,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-actions@6.1.10", "@storybook/addon-actions@^6.1.10":
+"@storybook/addon-actions@6.1.10":
   version "6.1.10"
   resolved "https://registry.npm.taobao.org/@storybook/addon-actions/download/@storybook/addon-actions-6.1.10.tgz#3742c316e914e2aef661a132e4d7e6c334e89997"
   integrity sha1-N0LDFukU4q72YaEy5NfmwzTomZc=
@@ -1792,7 +1792,7 @@
     core-js "^3.0.1"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-docs@6.1.10", "@storybook/addon-docs@^6.1.10":
+"@storybook/addon-docs@6.1.10":
   version "6.1.10"
   resolved "https://registry.npm.taobao.org/@storybook/addon-docs/download/@storybook/addon-docs-6.1.10.tgz#a118d1c9c0ff3158e95de59b752e367aadd6880b"
   integrity sha1-oRjRycD/MVjpXeWbdS42eq3WiAs=
@@ -1902,7 +1902,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@6.1.10", "@storybook/addons@^6.1.10":
+"@storybook/addons@6.1.10":
   version "6.1.10"
   resolved "https://registry.npm.taobao.org/@storybook/addons/download/@storybook/addons-6.1.10.tgz#3219134bb57d26b97c1d36c0eca3649a7f952d82"
   integrity sha1-MhkTS7V9Jrl8HTbA7KNkmn+VLYI=
@@ -2566,10 +2566,10 @@
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
 
-"@types/jest@^26.6.0":
-  version "26.0.19"
-  resolved "https://r.cnpmjs.org/@types/jest/download/@types/jest-26.0.19.tgz#e6fa1e3def5842ec85045bd5210e9bb8289de790"
-  integrity sha1-5voePe9YQuyFBFvVIQ6buCid55A=
+"@types/jest@^26.0.0":
+  version "26.0.20"
+  resolved "https://registry.npm.taobao.org/@types/jest/download/@types/jest-26.0.20.tgz#cd2f2702ecf69e86b586e1f5223a60e454056307"
+  integrity sha1-zS8nAuz2noa1huH1Ijpg5FQFYwc=
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"

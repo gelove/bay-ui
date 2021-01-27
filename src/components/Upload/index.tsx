@@ -170,9 +170,9 @@ export const Upload: FC<UploadProps> = (props) => {
   }
 
   return (
-    <div className="allen-upload-component">
+    <div className="bay-upload-component">
       <div
-        className="allen-upload-input"
+        className="bay-upload-input"
         style={{ display: 'inline-block' }}
         onClick={handleClick}
       >
@@ -188,7 +188,7 @@ export const Upload: FC<UploadProps> = (props) => {
           children
         )}
         <input
-          className="allen-file-input"
+          className="bay-file-input"
           style={{ display: 'none' }}
           ref={fileInput}
           onChange={handleFileChange}

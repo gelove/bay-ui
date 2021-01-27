@@ -1,4 +1,4 @@
-.allen-input-wrapper {
+.bay-input-wrapper {
   display: flex;
   width: 100%;
   margin-bottom: 30px;
@@ -18,10 +18,10 @@
     }
   }
 }
-.icon-wrapper+.allen-input-inner {
+.icon-wrapper+.bay-input-inner {
   padding-right: 35px;
 }
-.allen-input-inner {
+.bay-input-inner {
   width: 100%;
   padding: $input-padding-y $input-padding-x;
   font-family: $input-font-family;
@@ -60,8 +60,8 @@
     opacity: 1;
   }
 }
-.allen-input-group-prepend,
-.allen-input-group-append {
+.bay-input-group-prepend,
+.bay-input-group-append {
   display: flex;
   align-items: center;
   padding: $input-padding-y $input-padding-x;
@@ -76,27 +76,27 @@
   border: $input-border-width solid $input-group-addon-border-color;
   border-radius: $input-border-radius;
 }
-.allen-input-group-append + .btn {
+.bay-input-group-append + .btn {
   padding: 0;
   border: 0;
 }
-.input-group > .allen-input-group-prepend,
-.input-group.input-group-append > .allen-input-inner {
+.input-group > .bay-input-group-prepend,
+.input-group.input-group-append > .bay-input-inner {
   @include border-right-radius(0);
 }
 
-.input-group > .allen-input-group-append,
-.input-group.input-group-prepend > .allen-input-inner {
+.input-group > .bay-input-group-append,
+.input-group.input-group-prepend > .bay-input-inner {
   @include border-left-radius(0);
 }
 
-.input-size-sm .allen-input-inner {
+.input-size-sm .bay-input-inner {
   padding: $input-padding-y-sm $input-padding-x-sm;
   font-size: $input-font-size-sm;
   border-radius: $input-border-radius-sm;
 }
 
-.input-size-lg .allen-input-inner {
+.input-size-lg .bay-input-inner {
   padding: $input-padding-y-lg $input-padding-x-lg;
   font-size: $input-font-size-lg;
   border-radius: $input-border-radius-lg;

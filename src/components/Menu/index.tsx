@@ -1,9 +1,10 @@
-import React, { FC, useState, createContext, CSSProperties } from 'react'
+import React, {createContext, CSSProperties, FC, useState} from 'react'
 import classNames from 'classnames'
-import SubMenu, { SubMenuProps } from './subMenu'
-import MenuItem, { MenuItemProps } from './menuItem'
+import SubMenu, {SubMenuProps} from './subMenu'
+import MenuItem, {MenuItemProps} from './menuItem'
 
 type MenuMode = 'horizontal' | 'vertical'
+
 export interface MenuProps {
   /**默认 active 的菜单项的索引值 */
   defaultIndex?: string
@@ -24,12 +25,14 @@ interface IMenuContext {
   defaultOpenSubMenus?: string[]
 }
 
-export const MenuContext = createContext<IMenuContext>({ index: '0' })
+export const MenuContext = createContext<IMenuContext>({index: '0'})
 
 /**
  * 为网站提供导航功能的菜单。支持横向纵向两种模式，支持下拉菜单。
  * ```js
  * import { Menu } from 'bay-ui'
+ * // or
+ * import Menu from 'bay-ui/dist/components/Menu'
  * ```
  */
 const Menu: FC<MenuProps> = (props) => {
@@ -44,7 +47,7 @@ const Menu: FC<MenuProps> = (props) => {
   } = props
   const [currentActive, setActive] = useState(defaultIndex)
 
-  const classes = classNames('allen-menu', className, {
+  const classes = classNames('bay-menu', className, {
     'menu-vertical': mode === 'vertical',
     'menu-horizontal': mode !== 'vertical',
   })
@@ -65,18 +68,16 @@ const Menu: FC<MenuProps> = (props) => {
 
   const renderChildren = () => {
     return React.Children.map(children, (child, index) => {
-      const childElement = child as React.FunctionComponentElement<
-        MenuItemProps
-      >
-      const { displayName } = childElement.type
-      if (displayName === 'MenuItem' || displayName === 'SubMenu') {
+      const childElement = child as React.FunctionComponentElement<MenuItemProps>
+      if (['SubMenu', 'MenuItem'].includes(childElement.type.name)) {
         return React.cloneElement(childElement, {
           index: index.toString(),
         })
       } else {
         console.error(
-          'Warning: Menu has a child which is not a MenuItem component'
+          `Warning: Menu has a child[${childElement.type.name}] which is not a valid component`
         )
+        return null
       }
     })
   }

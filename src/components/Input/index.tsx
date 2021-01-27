@@ -28,16 +28,17 @@ export interface InputProps
 /**
  * Input 输入框 通过鼠标或键盘输入内容，是最基础的表单域的包装。
  *
- * ~~~js
- * // 这样引用
+ * ```js
  * import { Input } from 'bay-ui'
- * ~~~
+ * // or
+ * import Input from 'bay-ui/dist/components/Input'
+ * ```
  * 支持 HTMLInput 的所有基本属性
  */
 const Input: FC<InputProps> = (props) => {
   const { disabled, size, icon, prepend, append, style, ...restProps } = props
 
-  const classes = classNames('allen-input-wrapper', {
+  const classes = classNames('bay-input-wrapper', {
     [`input-size-${size}`]: size,
     'is-disabled': disabled,
     'input-group': prepend || append,
@@ -59,14 +60,14 @@ const Input: FC<InputProps> = (props) => {
 
   return (
     <div className={classes} style={style}>
-      {prepend && <div className="allen-input-group-prepend">{prepend}</div>}
+      {prepend && <div className="bay-input-group-prepend">{prepend}</div>}
       {icon && (
         <div className="icon-wrapper">
           <Icon icon={icon} title={`title-${icon}`} />
         </div>
       )}
-      <input className="allen-input-inner" disabled={disabled} {...restProps} />
-      {append && <div className="allen-input-group-append">{append}</div>}
+      <input className="bay-input-inner" disabled={disabled} {...restProps} />
+      {append && <div className="bay-input-group-append">{append}</div>}
     </div>
   )
 }
